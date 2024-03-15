@@ -30,5 +30,4 @@ def reco_system():
 #         return render_template('questions.html', message='Please enter required fields')
     
 if __name__ == '__main__':
-    app.debug = False
     app.run()
