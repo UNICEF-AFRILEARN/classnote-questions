@@ -4,11 +4,11 @@ import os
 
 app = Flask(__name__)
 
-@app.route('/')
-def main():
-    return render_template('questions.html')
+# @app.route('/')
+# def main():
+#     return render_template('questions.html')
 
-@app.route('/questions', methods=['GET','POST'])
+@app.route('/', methods=['GET','POST'])
 def reco_system():
 
     if request.method == 'GET':
@@ -19,15 +19,15 @@ def reco_system():
         questions = get_recommendations(lessonId)
         return questions
 
-@app.route('/submit', methods=['POST', 'GET'])
-def submit():
-    if request.method == 'POST' or request.method == 'GET':
-        lessonId = request.form['lessonId']
-        questions = get_recommendations(lessonId)
-        return questions
-    else:
-        return render_template('questions.html', message='Please enter required fields')
+# @app.route('/submit', methods=['POST', 'GET'])
+# def submit():
+#     if request.method == 'POST' or request.method == 'GET':
+#         lessonId = request.form['lessonId']
+#         questions = get_recommendations(lessonId)
+#         return questions
+#     else:
+#         return render_template('questions.html', message='Please enter required fields')
     
 if __name__ == '__main__':
-    port = int(os.environ.get("PORT", 5000))
-    app.run(host='0.0.0.0', port=port)
+    # port = int(os.environ.get("PORT", 5000))
+    app.run()
