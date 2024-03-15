@@ -3,3 +3,5 @@ pandas==1.5.3
 pymongo==4.4.0
 Werkzeug==2.2.2
 gunicorn
+pyarrow
+fastparquet
