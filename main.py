@@ -1,10 +1,10 @@
 from flask import Flask, render_template, request,jsonify
-from flask_cors import CORS
+#from flask_cors import CORS
 from recommender import get_recommendations
 import os
 
 app = Flask(__name__)
-CORS(app, resources={r"*":{"origins":"*"}})
+#CORS(app, resources={r"*":{"origins":"*"}})
 
 # @app.route('/')
 # def main():
