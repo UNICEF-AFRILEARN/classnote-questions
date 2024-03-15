@@ -1,1 +1,1 @@
-# classnote-questions
+# class-note-questions
