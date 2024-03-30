@@ -23,8 +23,8 @@ def handle_objectid(obj):
 
 
 def get_recommendations(lessonId):
-    questions =  pd.read_parquet("questions.parquet")
-    questions = questions[questions['lessonId']==lessonId]
+    questions =  pd.read_parquet("questionswithid.parquet")
+    questions = questions[questions['lessonId_new']==lessonId]
     n_questions = min(N_QUESTIONS,len(questions))
     recommended_questions=random.choices(list(questions['_id'].unique()),k=n_questions)
     recommended_questions = questions[questions['_id'].isin(recommended_questions)]
